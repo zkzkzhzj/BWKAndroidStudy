@@ -1,19 +1,28 @@
 package com.example.bwkandroidstudy.view
 
+import android.annotation.SuppressLint
+import android.content.Context
 import android.os.Build
 import android.os.Bundle
 import android.util.Log
 import android.view.*
+import android.view.inputmethod.InputMethodManager
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.LinearLayoutCompat
+import androidx.recyclerview.widget.ConcatAdapter
 import com.example.bwkandroidstudy.R
+import com.example.bwkandroidstudy.adpater.CustomAdapter
+import com.example.bwkandroidstudy.adpater.HeaderAdapter
+import com.example.bwkandroidstudy.adpater.MyAdapter
+import com.example.bwkandroidstudy.data.CustomRecyclerItem
 import com.example.bwkandroidstudy.databinding.TestLayoutLinearLayoutVersionBinding
 
 class LinearActivity : AppCompatActivity() {
     private lateinit var binding: TestLayoutLinearLayoutVersionBinding
 
+    @SuppressLint("ClickableViewAccessibility")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
@@ -37,11 +46,27 @@ class LinearActivity : AppCompatActivity() {
             binding.circleImageText3.text = getString(R.string.text_third_msg)
             binding.circleImageText4.text = getString(R.string.text_four_msg)
 
-            
+            val adapter = ConcatAdapter(HeaderAdapter(), CustomAdapter(setDataList()))
+            //binding.recycler.adapter = adapter
+            binding.recycler.adapter = MyAdapter(setDataList())
+
+            binding.edit1.setOnFocusChangeListener { v, hasFocus ->
+                if(!hasFocus) hideKeyboard(v)
+            }
+            binding.edit2.setOnFocusChangeListener { v, hasFocus ->
+                if(!hasFocus) hideKeyboard(v)
+            }
+            binding.edit3.setOnFocusChangeListener { v, hasFocus ->
+                if(!hasFocus) hideKeyboard(v)
+            }
 
             setOnClick()
         }
+    }
 
+    private fun hideKeyboard(view: View){
+        val inputService = getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
+        inputService.hideSoftInputFromWindow(view.windowToken, 0)
     }
 
     private fun setOnClick() {
@@ -112,6 +137,48 @@ class LinearActivity : AppCompatActivity() {
         }
 
         return height
+    }
+
+    private fun setDataList(): MutableList<CustomRecyclerItem>{
+        val mutableList = mutableListOf<CustomRecyclerItem>()
+        mutableList.add(
+            CustomRecyclerItem(
+                "https://w.namu.la/s/48a178fbd427b8dddc275cf878725e03d8499105f13e57c7ff889ef1cba3895d813b88696242cebb4f56d28ae2c93fbdef1f61731db76fc27f9070a8fceef4652016fbd8c0a144273d70a69c7dfff6d9",
+                "구글 이미지입니다"
+            )
+        )
+        mutableList.add(
+            CustomRecyclerItem(
+                "https://t1.daumcdn.net/cfile/tistory/24283C3858F778CA2E",
+                "강아지 이미지 입니"
+            )
+        )
+        mutableList.add(
+            CustomRecyclerItem(
+                "http://t1.daumcdn.net/friends/prod/editor/dc8b3d02-a15a-4afa-a88b-989cf2a50476.jpg",
+                "라이언 이미지입니다"
+            )
+        )
+        mutableList.add(
+            CustomRecyclerItem(
+                "https://interactive-examples.mdn.mozilla.net/media/cc0-images/grapefruit-slice-332-332.jpg",
+                "오렌지 이미지입니다"
+            )
+        )
+        mutableList.add(
+            CustomRecyclerItem(
+                "https://www.codingfactory.net/wp-content/uploads/abc.jpg",
+                "꽃 이미지입니다"
+            )
+        )
+        mutableList.add(
+            CustomRecyclerItem(
+                "https://www.urbanbrush.net/web/wp-content/uploads/edd/2020/02/urbanbrush-20200227023608426223.jpg",
+                "달걀 이미지입니"
+            )
+        )
+
+        return mutableList
     }
 
     /*

@@ -32,7 +32,7 @@ import com.example.bwkandroidstudy.view.LinearActivity
  * res 내부 -> raw, navigation 등
  * layoutInflater?
  * 모듈 apk 로 뽑으면 무슨일이?
- * src 와 background 의 차이이
+ * src 와 background 의 차이
  *
  * 8-3 이미지
  * 총 4개의 방식으로 만들기
@@ -46,6 +46,14 @@ import com.example.bwkandroidstudy.view.LinearActivity
  * (그리고 중간위쯤 회색 네모 3개 EditText 인데 클릭하면 키보드 올라오게 딴 View 클릭하면 키보드 내려가게)
  * (제일 하단 View 에 리사이클러 View 추가 : 아이템 열 개 정도 - 클릭하면 아이템이 몇번째 포지션을 가지고있는지 토스트 띄어주기)
  * (리사이클러 뷰 헤더에는 이미지)
+ *
+ *
+ * dpi, dip, dp, sp, px, 나인패치
+ * 해상도별 대응을 어떻게 할 것인가
+ * adjustViewBounds 비율 맞추기
+ * android resource 의 종류
+ * layout 배치
+ * 다중 모듈, enum class 사용법
  */
 
 class MainActivity : AppCompatActivity() {
