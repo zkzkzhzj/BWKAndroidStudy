@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.core.widget.NestedScrollView
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:fillViewport="true">
 
     <androidx.appcompat.widget.LinearLayoutCompat
@@ -31,35 +31,89 @@
             <androidx.appcompat.widget.LinearLayoutCompat
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:layout_weight="11"
-                android:padding="10dp">
-                <TextView
-                    android:layout_width="match_parent"
+                android:layout_weight="10"
+                android:padding="10dp"
+                android:orientation="horizontal">
+                <ImageView
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:background="@color/black"/>
+                    android:background="@color/green"
+                    android:layout_marginEnd="16dp"/>
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:orientation="vertical">
+
+                    <EditText
+                        android:id="@+id/edit_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:textSize="12sp"
+                        android:hint="에딧트 텍스트 예제입니다"/>
+                    <EditText
+                        android:id="@+id/edit_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:textSize="12dp"
+                        android:hint="텍스트 예제입니다"/>
+                    <EditText
+                        android:id="@+id/edit_3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:textSize="12sp"
+                        android:hint="예제입니다"/>
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_book_mark_24"
+                    android:adjustViewBounds="true"/>
             </androidx.appcompat.widget.LinearLayoutCompat>
 
             <androidx.appcompat.widget.LinearLayoutCompat
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:layout_weight="7"
-                android:padding="10dp">
-                <TextView
-                    android:layout_width="match_parent"
+                android:layout_weight="5"
+                android:padding="10dp"
+                android:orientation="horizontal">
+                <Button
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_marginEnd="5dp"
                     android:layout_height="match_parent"
-                    android:background="@color/green"/>
+                    android:background="@drawable/background_button_not_click"
+                    android:text="@string/button_experience_msg"
+                    android:textColor="@color/green"
+                    android:textSize="20sp"/>
+                <Button
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/background_button_click"
+                    android:text="@string/button_install_msg"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"/>
             </androidx.appcompat.widget.LinearLayoutCompat>
 
             <TextView
-                android:layout_width="match_parent"
+                android:layout_width="100dp"
                 android:layout_height="0dp"
                 android:layout_weight="1"
-                android:background="@color/teal_200" />
+                android:layout_gravity="right"
+                android:layout_marginEnd="10dp"
+                android:background="@color/grey" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:background="@color/black"
+                android:background="@color/grey"
                 android:layout_margin="10dp"
                 android:layout_weight="0.2"/>
 
@@ -68,24 +122,109 @@
                 android:layout_height="0dp"
                 android:layout_weight="10"
                 android:padding="10dp">
-                <TextView
-                    android:layout_width="match_parent"
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:background="@color/green"/>
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginEnd="5dp">
+                    <ImageView
+                        android:id="@+id/circle_image_1"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:src="@drawable/background_image_circle"
+                        android:adjustViewBounds="true"
+                        android:layout_weight="7"/>
+                    <TextView
+                        android:id="@+id/circle_image_text_1"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="3"
+                        android:textSize="11sp"
+                        android:gravity="center"/>
+                </androidx.appcompat.widget.LinearLayoutCompat>
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="5dp">
+                    <ImageView
+                        android:id="@+id/circle_image_2"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:src="@drawable/background_image_circle"
+                        android:adjustViewBounds="true"
+                        android:layout_weight="7"/>
+                    <TextView
+                        android:id="@+id/circle_image_text_2"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="3"
+                        android:textSize="11sp"
+                        android:gravity="center"/>
+                </androidx.appcompat.widget.LinearLayoutCompat>
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="5dp">
+                    <ImageView
+                        android:id="@+id/circle_image_3"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:src="@drawable/background_image_circle"
+                        android:adjustViewBounds="true"
+                        android:layout_weight="7"/>
+                    <TextView
+                        android:id="@+id/circle_image_text_3"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="3"
+                        android:textSize="11sp"
+                        android:gravity="center"/>
+                </androidx.appcompat.widget.LinearLayoutCompat>
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="30dp">
+                    <ImageView
+                        android:id="@+id/circle_image_4"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:src="@drawable/background_image_circle"
+                        android:adjustViewBounds="true"
+                        android:layout_weight="7"/>
+                    <TextView
+                        android:id="@+id/circle_image_text_4"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="3"
+                        android:textSize="11sp"
+                        android:gravity="center"/>
+                </androidx.appcompat.widget.LinearLayoutCompat>
             </androidx.appcompat.widget.LinearLayoutCompat>
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:background="@color/black"
+                android:background="@color/grey"
                 android:layout_margin="10dp"
                 android:layout_weight="0.2"/>
 
             <TextView
-                android:layout_width="match_parent"
+                android:layout_width="300dp"
                 android:layout_height="0dp"
                 android:layout_weight="2"
-                android:background="@color/teal_200"/>
+                android:layout_gravity="center"
+                android:background="@color/grey"/>
 
             <TextView
                 android:layout_width="match_parent"
@@ -93,19 +232,38 @@
                 android:layout_weight="0.5"/>
 
             <TextView
-                android:layout_width="match_parent"
+                android:layout_width="250dp"
                 android:layout_height="0dp"
                 android:layout_weight="2"
-                android:background="@color/black"/>
+                android:layout_gravity="center"
+                android:background="@color/grey"/>
 
             <androidx.appcompat.widget.LinearLayoutCompat
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="10"
                 android:paddingTop="10dp">
-                <TextView
-                    android:layout_width="match_parent"
+                <ImageView
+                    android:id="@+id/bottom_image_1"
+                    android:layout_width="0dp"
                     android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="5dp"
+                    android:background="@color/green"/>
+                <ImageView
+                    android:id="@+id/bottom_image_2"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:background="@color/green"/>
+                <ImageView
+                    android:id="@+id/bottom_image_3"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:layout_marginStart="5dp"
                     android:background="@color/green"/>
             </androidx.appcompat.widget.LinearLayoutCompat>
 
@@ -114,7 +272,8 @@
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recycler"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
 
     </androidx.appcompat.widget.LinearLayoutCompat>
 

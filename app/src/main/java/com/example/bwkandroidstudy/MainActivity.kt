@@ -1,6 +1,9 @@
 package com.example.bwkandroidstudy
 
+import android.content.Intent
 import android.graphics.Typeface
+import android.graphics.drawable.ShapeDrawable
+import android.graphics.drawable.shapes.OvalShape
 import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -15,6 +18,8 @@ import androidx.core.content.ContextCompat
 import com.example.bwkandroidstudy.databinding.TestLayoutLinearLayoutVersionBinding
 import android.view.WindowInsets
 import androidx.appcompat.widget.LinearLayoutCompat
+import com.example.bwkandroidstudy.databinding.ActivityMainBinding
+import com.example.bwkandroidstudy.view.LinearActivity
 
 
 /*
@@ -44,56 +49,17 @@ import androidx.appcompat.widget.LinearLayoutCompat
  */
 
 class MainActivity : AppCompatActivity() {
-    private lateinit var binding : TestLayoutLinearLayoutVersionBinding
+    private lateinit var binding : ActivityMainBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        binding = TestLayoutLinearLayoutVersionBinding.inflate(layoutInflater)
+        binding = ActivityMainBinding.inflate(layoutInflater)
 
         setContentView(binding.root)
 
-        setSupportActionBar(binding.toolbar)
-
-        val height: Int
-
-        if (Build.VERSION.SDK_INT >= 30){
-            val metrics = windowManager.currentWindowMetrics
-            val windowInsets = metrics.windowInsets
-
-            val insets = windowInsets.getInsetsIgnoringVisibility(
-                WindowInsets.Type.navigationBars()
-                        or WindowInsets.Type.displayCutout()
-            )
-
-            val insetsHeight = insets.top + insets.bottom
-            val bounds = metrics.bounds
-
-            height = bounds.height() - insetsHeight
-
-            Log.e("############", "api 30 이상")
-        } else {
-            height = resources.displayMetrics.heightPixels
-
-            Log.e("############", "api 30 미만")
+        binding.linearBtn.setOnClickListener {
+            startActivity(Intent(this@MainActivity, LinearActivity::class.java))
         }
-
-        binding.mainLayout.layoutParams = LinearLayoutCompat.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, height)
-
-        supportActionBar?.setDisplayHomeAsUpEnabled(true)
-        supportActionBar?.setHomeButtonEnabled(true)
-        supportActionBar?.setDisplayShowTitleEnabled(false)
-
-    }
-
-    /*
-     * 메뉴 세팅
-     * 초기화 한번만 호출됨
-     *  - 메뉴 목록 변경시 onPrepareOptionsMenu() 메소드 참
-     * 메뉴를 보이려면 true, 안보이려면 false 리턴
-     */
-    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
-        menuInflater.inflate(R.menu.toolbar, menu)
-        return true
     }
 }

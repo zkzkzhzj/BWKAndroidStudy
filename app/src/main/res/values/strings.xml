@@ -3,4 +3,25 @@
 
     <!-- toolbar -->
     <string name="toolbar_search_title">search</string>
+
+    <!-- button -->
+    <string name="button_experience_msg">TRY NOW</string>
+    <string name="button_install_msg">INSTALL</string>
+
+    <!-- textView -->
+    <string name="text_first_msg">첫 번째 이미지</string>
+    <string name="text_second_msg">두 번째 이미지</string>
+    <string name="text_third_msg">세 번째 이미지</string>
+    <string name="text_four_msg">네 번째 이미지</string>
+
+    <!-- dialog -->
+    <string name="dialog_hide_title">숨기시겠습니까?</string>
+    <string name="dialog_hide_message">두 번째 이미지를 숨기시겠습니까?</string>
+    <string name="dialog_show_title">보여주겠습니까?</string>
+    <string name="dialog_show_message">두 번째 이미지를 보여주겠습니까?</string>
+    <string name="dialog_positive">네</string>
+    <string name="dialog_negative">아니오</string>
+
+    <!-- recycler -->
+    <string name="recycler_header_title">헤더 입니다</string>
 </resources>
