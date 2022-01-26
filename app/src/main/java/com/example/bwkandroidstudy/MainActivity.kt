@@ -1,15 +1,21 @@
 package com.example.bwkandroidstudy
 
 import android.graphics.Typeface
+import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.Gravity
-import android.view.ViewGroup
+import android.util.Log
+import android.util.Size
+import android.view.*
 import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.appcompat.widget.Toolbar
 import androidx.core.content.ContextCompat
+import com.example.bwkandroidstudy.databinding.TestLayoutLinearLayoutVersionBinding
+import android.view.WindowInsets
+import androidx.appcompat.widget.LinearLayoutCompat
+
 
 /*
  * dpi
@@ -38,41 +44,56 @@ import androidx.core.content.ContextCompat
  */
 
 class MainActivity : AppCompatActivity() {
+    private lateinit var binding : TestLayoutLinearLayoutVersionBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.test_layout_linear_layout_version)
 
-        val toolbar = findViewById<Toolbar>(R.id.toolbar)
-        setSupportActionBar(toolbar)
+        binding = TestLayoutLinearLayoutVersionBinding.inflate(layoutInflater)
 
-        supportActionBar?.title = "비밀번호 확인"
+        setContentView(binding.root)
+
+        setSupportActionBar(binding.toolbar)
+
+        val height: Int
+
+        if (Build.VERSION.SDK_INT >= 30){
+            val metrics = windowManager.currentWindowMetrics
+            val windowInsets = metrics.windowInsets
+
+            val insets = windowInsets.getInsetsIgnoringVisibility(
+                WindowInsets.Type.navigationBars()
+                        or WindowInsets.Type.displayCutout()
+            )
+
+            val insetsHeight = insets.top + insets.bottom
+            val bounds = metrics.bounds
+
+            height = bounds.height() - insetsHeight
+
+            Log.e("############", "api 30 이상")
+        } else {
+            height = resources.displayMetrics.heightPixels
+
+            Log.e("############", "api 30 미만")
+        }
+
+        binding.mainLayout.layoutParams = LinearLayoutCompat.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, height)
+
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         supportActionBar?.setHomeButtonEnabled(true)
-        supportActionBar?.setBackgroundDrawable(getDrawable(R.drawable.ic_launcher_background))
+        supportActionBar?.setDisplayShowTitleEnabled(false)
 
-/*
-  setContentView(R.layout.activity_main2)
-  val toolbar = findViewById<Toolbar>(R.id.toolbar)
-        setSupportActionBar(toolbar)
+    }
 
-        supportActionBar?.title = "비밀번호 확인"
-        supportActionBar?.setDisplayHomeAsUpEnabled(true)
-        supportActionBar?.setHomeButtonEnabled(true)
-        supportActionBar?.setBackgroundDrawable(getDrawable(R.drawable.ic_launcher_background))
-
-        */
-/*
-  setContentView(R.layout.test_layout_linear_layout_version)
-
-        val toolbar = findViewById<Toolbar>(R.id.toolbar)
-        setSupportActionBar(toolbar)
-
-        supportActionBar?.title = "비밀번호 확인"
-        supportActionBar?.setDisplayHomeAsUpEnabled(true)
-        supportActionBar?.setHomeButtonEnabled(true)
-        supportActionBar?.setBackgroundDrawable(getDrawable(R.drawable.ic_launcher_background))
-
-
- */
+    /*
+     * 메뉴 세팅
+     * 초기화 한번만 호출됨
+     *  - 메뉴 목록 변경시 onPrepareOptionsMenu() 메소드 참
+     * 메뉴를 보이려면 true, 안보이려면 false 리턴
+     */
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.toolbar, menu)
+        return true
     }
 }
