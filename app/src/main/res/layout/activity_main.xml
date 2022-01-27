@@ -17,4 +17,13 @@
         app:layout_constraintBottom_toBottomOf="parent"
         android:text="LinearLayout 이동"/>
 
+    <Button
+        android:id="@+id/constraint_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/linear_btn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:text="Constraint 이동"/>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

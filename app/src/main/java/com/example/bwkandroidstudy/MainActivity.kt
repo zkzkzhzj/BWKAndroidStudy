@@ -19,6 +19,7 @@ import com.example.bwkandroidstudy.databinding.TestLayoutLinearLayoutVersionBind
 import android.view.WindowInsets
 import androidx.appcompat.widget.LinearLayoutCompat
 import com.example.bwkandroidstudy.databinding.ActivityMainBinding
+import com.example.bwkandroidstudy.view.ConstraintActivity
 import com.example.bwkandroidstudy.view.LinearActivity
 
 
@@ -68,6 +69,10 @@ class MainActivity : AppCompatActivity() {
 
         binding.linearBtn.setOnClickListener {
             startActivity(Intent(this@MainActivity, LinearActivity::class.java))
+        }
+
+        binding.constraintBtn.setOnClickListener {
+            startActivity(Intent(this@MainActivity, ConstraintActivity::class.java))
         }
     }
 }
