@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.BWKAndroidStudy">
         <activity
+            android:name=".view.RelativeActivity"
+            android:exported="true" />
+        <activity
             android:name=".view.ConstraintActivity"
             android:exported="false" />
         <activity

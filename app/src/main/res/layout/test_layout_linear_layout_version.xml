@@ -14,7 +14,7 @@
         android:focusable="true">
 
         <androidx.appcompat.widget.LinearLayoutCompat
-            android:id="@+id/main_layout"
+            android:id="@+id/mainLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
@@ -50,7 +50,7 @@
                     android:orientation="vertical">
 
                     <EditText
-                        android:id="@+id/edit_1"
+                        android:id="@+id/edit1"
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
                         android:layout_weight="1"
@@ -58,7 +58,7 @@
                         android:hint="에딧트 텍스트 예제입니다"
                         />
                     <EditText
-                        android:id="@+id/edit_2"
+                        android:id="@+id/edit2"
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
                         android:layout_weight="1"
@@ -66,7 +66,7 @@
                         android:hint="텍스트 예제입니다"
                         />
                     <EditText
-                        android:id="@+id/edit_3"
+                        android:id="@+id/edit3"
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
                         android:layout_weight="1"
@@ -136,14 +136,14 @@
                     android:layout_marginStart="30dp"
                     android:layout_marginEnd="5dp">
                     <ImageView
-                        android:id="@+id/circle_image_1"
+                        android:id="@+id/circleImage1"
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
                         android:src="@drawable/background_image_circle"
                         android:adjustViewBounds="true"
                         android:layout_weight="7"/>
                     <TextView
-                        android:id="@+id/circle_image_text_1"
+                        android:id="@+id/circleImageText1"
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
                         android:layout_weight="3"
@@ -158,14 +158,14 @@
                     android:layout_marginStart="5dp"
                     android:layout_marginEnd="5dp">
                     <ImageView
-                        android:id="@+id/circle_image_2"
+                        android:id="@+id/circleImage2"
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
                         android:src="@drawable/background_image_circle"
                         android:adjustViewBounds="true"
                         android:layout_weight="7"/>
                     <TextView
-                        android:id="@+id/circle_image_text_2"
+                        android:id="@+id/circleImageText2"
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
                         android:layout_weight="3"
@@ -180,14 +180,14 @@
                     android:layout_marginStart="5dp"
                     android:layout_marginEnd="5dp">
                     <ImageView
-                        android:id="@+id/circle_image_3"
+                        android:id="@+id/circleImage3"
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
                         android:src="@drawable/background_image_circle"
                         android:adjustViewBounds="true"
                         android:layout_weight="7"/>
                     <TextView
-                        android:id="@+id/circle_image_text_3"
+                        android:id="@+id/circleImageText3"
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
                         android:layout_weight="3"
@@ -203,14 +203,14 @@
                     android:layout_marginEnd="30dp">
 
                     <ImageView
-                        android:id="@+id/circle_image_4"
+                        android:id="@+id/circleImage4"
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
                         android:src="@drawable/background_image_circle"
                         android:adjustViewBounds="true"
                         android:layout_weight="7"/>
                     <TextView
-                        android:id="@+id/circle_image_text_4"
+                        android:id="@+id/circleImageText4"
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
                         android:layout_weight="3"
@@ -251,14 +251,14 @@
                 android:layout_weight="10"
                 android:paddingTop="10dp">
                 <ImageView
-                    android:id="@+id/bottom_image_1"
+                    android:id="@+id/bottomImage1"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:layout_marginEnd="5dp"
                     android:background="@color/green"/>
                 <ImageView
-                    android:id="@+id/bottom_image_2"
+                    android:id="@+id/bottomImage2"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
@@ -266,7 +266,7 @@
                     android:layout_marginEnd="5dp"
                     android:background="@color/green"/>
                 <ImageView
-                    android:id="@+id/bottom_image_3"
+                    android:id="@+id/bottomImage3"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"

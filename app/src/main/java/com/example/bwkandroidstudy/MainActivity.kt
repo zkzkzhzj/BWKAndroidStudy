@@ -21,6 +21,7 @@ import androidx.appcompat.widget.LinearLayoutCompat
 import com.example.bwkandroidstudy.databinding.ActivityMainBinding
 import com.example.bwkandroidstudy.view.ConstraintActivity
 import com.example.bwkandroidstudy.view.LinearActivity
+import com.example.bwkandroidstudy.view.RelativeActivity
 
 
 /*
@@ -73,6 +74,10 @@ class MainActivity : AppCompatActivity() {
 
         binding.constraintBtn.setOnClickListener {
             startActivity(Intent(this@MainActivity, ConstraintActivity::class.java))
+        }
+
+        binding.relativeBtn.setOnClickListener {
+            startActivity(Intent(this@MainActivity, RelativeActivity::class.java))
         }
     }
 }
