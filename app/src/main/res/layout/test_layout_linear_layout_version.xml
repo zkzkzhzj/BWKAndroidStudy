@@ -51,7 +51,7 @@
 
                     <EditText
                         android:id="@+id/edit_1"
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="0dp"
                         android:layout_weight="1"
                         android:textSize="12sp"
@@ -59,7 +59,7 @@
                         />
                     <EditText
                         android:id="@+id/edit_2"
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="0dp"
                         android:layout_weight="1"
                         android:textSize="12dp"
@@ -67,7 +67,7 @@
                         />
                     <EditText
                         android:id="@+id/edit_3"
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="0dp"
                         android:layout_weight="1"
                         android:textSize="12sp"
@@ -201,6 +201,7 @@
                     android:orientation="vertical"
                     android:layout_marginStart="5dp"
                     android:layout_marginEnd="30dp">
+
                     <ImageView
                         android:id="@+id/circle_image_4"
                         android:layout_width="match_parent"
@@ -279,10 +280,7 @@
             android:id="@+id/recycler"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-            android:clickable="true"
-            android:focusableInTouchMode="true"
-            android:focusable="true"/>
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
 
     </androidx.appcompat.widget.LinearLayoutCompat>
 

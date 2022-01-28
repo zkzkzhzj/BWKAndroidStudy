@@ -144,37 +144,43 @@ class LinearActivity : AppCompatActivity() {
         mutableList.add(
             CustomRecyclerItem(
                 "https://w.namu.la/s/48a178fbd427b8dddc275cf878725e03d8499105f13e57c7ff889ef1cba3895d813b88696242cebb4f56d28ae2c93fbdef1f61731db76fc27f9070a8fceef4652016fbd8c0a144273d70a69c7dfff6d9",
-                "구글 이미지입니다"
+                "구글 이미지입니다",
+                0
             )
         )
         mutableList.add(
             CustomRecyclerItem(
                 "https://t1.daumcdn.net/cfile/tistory/24283C3858F778CA2E",
-                "강아지 이미지 입니"
+                "강아지 이미지 입니",
+                1
             )
         )
         mutableList.add(
             CustomRecyclerItem(
                 "http://t1.daumcdn.net/friends/prod/editor/dc8b3d02-a15a-4afa-a88b-989cf2a50476.jpg",
-                "라이언 이미지입니다"
+                "라이언 이미지입니다",
+                1
             )
         )
         mutableList.add(
             CustomRecyclerItem(
                 "https://interactive-examples.mdn.mozilla.net/media/cc0-images/grapefruit-slice-332-332.jpg",
-                "오렌지 이미지입니다"
+                "오렌지 이미지입니다",
+                1
             )
         )
         mutableList.add(
             CustomRecyclerItem(
                 "https://www.codingfactory.net/wp-content/uploads/abc.jpg",
-                "꽃 이미지입니다"
+                "꽃 이미지입니다",
+            1
             )
         )
         mutableList.add(
             CustomRecyclerItem(
                 "https://www.urbanbrush.net/web/wp-content/uploads/edd/2020/02/urbanbrush-20200227023608426223.jpg",
-                "달걀 이미지입니"
+                "달걀 이미지입니",
+                1
             )
         )
 

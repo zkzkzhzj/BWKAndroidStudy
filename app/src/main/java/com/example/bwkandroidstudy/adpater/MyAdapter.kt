@@ -40,10 +40,11 @@ class MyAdapter(private val dataSet: MutableList<CustomRecyclerItem>) :
 
     // 뷰 타입을 리턴함(position 값을 계산해서 리턴)
     override fun getItemViewType(position: Int): Int {
-        return when(position){
-            0 -> HEADER
-            else -> BODY
-        }
+        return dataSet[position].type
+//        return when(position){
+//            0 -> HEADER
+//            else -> BODY
+//        }
     }
 
     // 위에서 확인하고 리턴해준 뷰 타입을 비교하여 알맞은 레이아웃을 넣은 뷰 홀더 반환
