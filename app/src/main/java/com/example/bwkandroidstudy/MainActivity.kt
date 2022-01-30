@@ -22,6 +22,7 @@ import com.example.bwkandroidstudy.databinding.ActivityMainBinding
 import com.example.bwkandroidstudy.view.ConstraintActivity
 import com.example.bwkandroidstudy.view.LinearActivity
 import com.example.bwkandroidstudy.view.RelativeActivity
+import com.example.bwkandroidstudy.view.StopWatchActivity
 
 
 /*
@@ -78,6 +79,10 @@ class MainActivity : AppCompatActivity() {
 
         binding.relativeBtn.setOnClickListener {
             startActivity(Intent(this@MainActivity, RelativeActivity::class.java))
+        }
+
+        binding.stopWatch.setOnClickListener {
+            startActivity(Intent(this@MainActivity, StopWatchActivity::class.java))
         }
     }
 }

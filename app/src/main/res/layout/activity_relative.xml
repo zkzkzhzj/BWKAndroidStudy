@@ -1,14 +1,260 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".view.RelativeActivity">
+    android:fillViewport="true">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="하하하하하 렐러티브"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
-</RelativeLayout>
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/green"/>
+
+        <ImageView
+            android:id="@+id/topImage"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:background="@color/green"
+            android:layout_below="@id/toolbar" />
+
+        <ImageView
+            android:id="@+id/profileImage"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_below="@id/topImage"
+            android:layout_margin="10dp"
+            android:background="@drawable/nemo" />
+
+        <EditText
+            android:id="@+id/edit1"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:layout_toEndOf="@id/profileImage"
+            android:layout_below="@id/topImage"
+            android:layout_marginEnd="40dp"
+            android:layout_marginTop="10dp"
+            android:hint="에딧트 텍스트 테스트 입니다"
+            android:textSize="12sp" />
+        <EditText
+            android:id="@+id/edit2"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:layout_toEndOf="@id/profileImage"
+            android:layout_below="@id/edit1"
+            android:layout_marginEnd="40dp"
+            android:layout_marginTop="10dp"
+            android:hint="텍스트 테스트 입니다"
+            android:textSize="12sp" />
+        <EditText
+            android:id="@+id/edit3"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:layout_toEndOf="@id/profileImage"
+            android:layout_below="@id/edit2"
+            android:layout_marginEnd="40dp"
+            android:layout_marginTop="10dp"
+            android:hint="테스트 입니다"
+            android:textSize="12sp" />
+
+        <ImageView
+            android:id="@+id/bookMark"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/topImage"
+            android:layout_alignParentEnd="true"
+            android:layout_margin="10dp"
+            android:background="@drawable/ic_book_mark_24" />
+
+        <Button
+            android:id="@+id/tryBtn"
+            android:layout_width="190dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/background_button_not_click"
+            android:text="@string/button_experience_msg"
+            android:textColor="@color/green"
+            android:textSize="20sp"
+            android:layout_below="@id/profileImage"
+            android:layout_marginStart="10dp" />
+
+        <Button
+            android:id="@+id/installBtn"
+            android:layout_width="190dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/background_button_click"
+            android:text="@string/button_install_msg"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:layout_below="@id/profileImage"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="10dp" />
+
+        <TextView
+            android:id="@id/middleText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/installBtn"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:text="테스트 텍스트입니다" />
+
+        <View
+            android:id="@+id/middleLine"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/grey"
+            android:layout_below="@id/middleText"
+            android:layout_margin="10dp" />
+
+        <ImageView
+            android:id="@+id/circleImage1"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/middleLine"
+            android:src="@drawable/background_image_circle"
+            android:adjustViewBounds="true"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="5dp" />
+        <ImageView
+            android:id="@+id/circleImage2"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/middleLine"
+            android:src="@drawable/background_image_circle"
+            android:adjustViewBounds="true"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_toEndOf="@id/circleImage1" />
+        <ImageView
+            android:id="@+id/circleImage3"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/middleLine"
+            android:src="@drawable/background_image_circle"
+            android:adjustViewBounds="true"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_toEndOf="@id/circleImage2" />
+        <ImageView
+            android:id="@+id/circleImage4"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/middleLine"
+            android:src="@drawable/background_image_circle"
+            android:adjustViewBounds="true"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="30dp"
+            android:layout_toEndOf="@id/circleImage3" />
+
+        <TextView
+            android:id="@+id/circleImageText1"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:gravity="center"
+            android:layout_marginTop="10dp"
+            android:layout_below="@id/circleImage1"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="5dp" />
+        <TextView
+            android:id="@+id/circleImageText2"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:gravity="center"
+            android:layout_marginTop="10dp"
+            android:layout_below="@id/circleImage1"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_toEndOf="@id/circleImageText1" />
+        <TextView
+            android:id="@+id/circleImageText3"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:gravity="center"
+            android:layout_marginTop="10dp"
+            android:layout_below="@id/circleImage1"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_toEndOf="@id/circleImageText2" />
+        <TextView
+            android:id="@+id/circleImageText4"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:gravity="center"
+            android:layout_marginTop="10dp"
+            android:layout_below="@id/circleImage1"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="30dp"
+            android:layout_toEndOf="@id/circleImageText3" />
+
+        <View
+            android:id="@+id/bottomLine"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/grey"
+            android:layout_margin="10dp"
+            android:layout_below="@id/circleImageText1" />
+
+        <TextView
+            android:id="@+id/bottomText1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="테스트용 텍스트입니다 하하하하하하하"
+            android:layout_below="@id/bottomLine"
+            android:layout_centerInParent="true"/>
+
+        <TextView
+            android:id="@+id/bottomText2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="테스트용 텍스트입니다"
+            android:layout_below="@id/bottomText1"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="10dp"
+            android:layout_centerInParent="true"/>
+
+        <ImageView
+            android:id="@+id/bottomImage1"
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:src="@drawable/nemo"
+            android:layout_below="@id/bottomText2"/>
+
+        <ImageView
+            android:id="@+id/bottomImage2"
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:src="@drawable/nemo"
+            android:layout_below="@id/bottomText2"
+            android:layout_toEndOf="@id/bottomImage1"
+            android:layout_marginStart="11dp"/>
+
+        <ImageView
+            android:id="@+id/bottomImage3"
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:src="@drawable/nemo"
+            android:layout_below="@id/bottomText2"
+            android:layout_toEndOf="@id/bottomImage2"
+            android:layout_marginStart="11dp"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/bottomImage1"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
+    </RelativeLayout>
+
+</androidx.core.widget.NestedScrollView>
