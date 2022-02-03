@@ -8,6 +8,15 @@
     android:layout_marginStart="16dp">
 
     <Button
+        android:id="@+id/custom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@id/stopWatch"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="Custom 이동"/>
+
+    <Button
         android:id="@+id/stopWatch"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

@@ -19,10 +19,7 @@ import com.example.bwkandroidstudy.databinding.TestLayoutLinearLayoutVersionBind
 import android.view.WindowInsets
 import androidx.appcompat.widget.LinearLayoutCompat
 import com.example.bwkandroidstudy.databinding.ActivityMainBinding
-import com.example.bwkandroidstudy.view.ConstraintActivity
-import com.example.bwkandroidstudy.view.LinearActivity
-import com.example.bwkandroidstudy.view.RelativeActivity
-import com.example.bwkandroidstudy.view.StopWatchActivity
+import com.example.bwkandroidstudy.view.*
 
 
 /*
@@ -83,6 +80,10 @@ class MainActivity : AppCompatActivity() {
 
         binding.stopWatch.setOnClickListener {
             startActivity(Intent(this@MainActivity, StopWatchActivity::class.java))
+        }
+
+        binding.custom.setOnClickListener {
+            startActivity(Intent(this@MainActivity, CustomActivity::class.java))
         }
     }
 }

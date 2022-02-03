@@ -7,7 +7,10 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:focusableInTouchMode="true"
+        android:focusable="true">
 
         <androidx.appcompat.widget.Toolbar
             android:id="@+id/toolbar"
@@ -113,16 +116,16 @@
 
         <ImageView
             android:id="@+id/circleImage1"
-            android:layout_width="80dp"
+            android:layout_width="76dp"
             android:layout_height="wrap_content"
             android:layout_below="@id/middleLine"
-            android:src="@drawable/background_image_circle"
-            android:adjustViewBounds="true"
             android:layout_marginStart="30dp"
-            android:layout_marginEnd="5dp" />
+            android:layout_marginEnd="5dp"
+            android:adjustViewBounds="true"
+            android:src="@drawable/background_image_circle" />
         <ImageView
             android:id="@+id/circleImage2"
-            android:layout_width="80dp"
+            android:layout_width="76dp"
             android:layout_height="wrap_content"
             android:layout_below="@id/middleLine"
             android:src="@drawable/background_image_circle"
@@ -132,7 +135,7 @@
             android:layout_toEndOf="@id/circleImage1" />
         <ImageView
             android:id="@+id/circleImage3"
-            android:layout_width="80dp"
+            android:layout_width="76dp"
             android:layout_height="wrap_content"
             android:layout_below="@id/middleLine"
             android:src="@drawable/background_image_circle"
@@ -140,20 +143,21 @@
             android:layout_marginStart="5dp"
             android:layout_marginEnd="5dp"
             android:layout_toEndOf="@id/circleImage2" />
+
         <ImageView
             android:id="@+id/circleImage4"
-            android:layout_width="80dp"
+            android:layout_width="76dp"
             android:layout_height="wrap_content"
             android:layout_below="@id/middleLine"
-            android:src="@drawable/background_image_circle"
-            android:adjustViewBounds="true"
             android:layout_marginStart="5dp"
             android:layout_marginEnd="30dp"
-            android:layout_toEndOf="@id/circleImage3" />
+            android:layout_toEndOf="@id/circleImage3"
+            android:adjustViewBounds="true"
+            android:src="@drawable/background_image_circle" />
 
         <TextView
             android:id="@+id/circleImageText1"
-            android:layout_width="80dp"
+            android:layout_width="76dp"
             android:layout_height="wrap_content"
             android:textSize="12sp"
             android:gravity="center"
@@ -163,7 +167,7 @@
             android:layout_marginEnd="5dp" />
         <TextView
             android:id="@+id/circleImageText2"
-            android:layout_width="80dp"
+            android:layout_width="76dp"
             android:layout_height="wrap_content"
             android:textSize="12sp"
             android:gravity="center"
@@ -174,7 +178,7 @@
             android:layout_toEndOf="@id/circleImageText1" />
         <TextView
             android:id="@+id/circleImageText3"
-            android:layout_width="80dp"
+            android:layout_width="76dp"
             android:layout_height="wrap_content"
             android:textSize="12sp"
             android:gravity="center"
@@ -185,7 +189,7 @@
             android:layout_toEndOf="@id/circleImageText2" />
         <TextView
             android:id="@+id/circleImageText4"
-            android:layout_width="80dp"
+            android:layout_width="76dp"
             android:layout_height="wrap_content"
             android:textSize="12sp"
             android:gravity="center"
@@ -223,31 +227,31 @@
 
         <ImageView
             android:id="@+id/bottomImage1"
-            android:layout_width="130dp"
+            android:layout_width="124dp"
             android:layout_height="wrap_content"
+            android:layout_below="@id/bottomText2"
             android:adjustViewBounds="true"
-            android:src="@drawable/nemo"
-            android:layout_below="@id/bottomText2"/>
+            android:src="@drawable/nemo" />
 
         <ImageView
             android:id="@+id/bottomImage2"
-            android:layout_width="130dp"
+            android:layout_width="123dp"
             android:layout_height="wrap_content"
-            android:adjustViewBounds="true"
-            android:src="@drawable/nemo"
             android:layout_below="@id/bottomText2"
+            android:layout_marginStart="11dp"
             android:layout_toEndOf="@id/bottomImage1"
-            android:layout_marginStart="11dp"/>
+            android:adjustViewBounds="true"
+            android:src="@drawable/nemo" />
 
         <ImageView
             android:id="@+id/bottomImage3"
-            android:layout_width="130dp"
+            android:layout_width="124dp"
             android:layout_height="wrap_content"
-            android:adjustViewBounds="true"
-            android:src="@drawable/nemo"
             android:layout_below="@id/bottomText2"
+            android:layout_marginStart="11dp"
             android:layout_toEndOf="@id/bottomImage2"
-            android:layout_marginStart="11dp"/>
+            android:adjustViewBounds="true"
+            android:src="@drawable/nemo" />
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recycler"

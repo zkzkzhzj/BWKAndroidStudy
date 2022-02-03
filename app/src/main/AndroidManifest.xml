@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.BWKAndroidStudy">
         <activity
+            android:name=".view.CustomActivity"
+            android:exported="true" />
+        <activity
             android:name=".view.StopWatchActivity"
             android:exported="false" />
         <activity
